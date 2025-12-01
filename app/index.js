@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+app.get("/mithu", (req, res) => {
+  res.send("Hello from Mithu");
+});
+
 app.get("/:id", (req, res) => {
   res.send(`Hello World ${req.params.id}`);
 });
