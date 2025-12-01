@@ -31,7 +31,8 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: success()
+
     steps:
       - name: Trigger Render Deploy Hook
         run: |
-          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
